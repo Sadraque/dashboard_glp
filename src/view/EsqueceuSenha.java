@@ -48,7 +48,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -121,9 +121,9 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         getContentPane().add(jLabel10);
         jLabel10.setBounds(130, 300, 540, 20);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\sadra\\Documents\\NetBeansProjects\\dashboard-glp\\src\\img\\background.jpeg")); // NOI18N
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(0, -100, 800, 1000);
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\sadra\\Documents\\NetBeansProjects\\dashboard-glp\\src\\img\\background.jpeg")); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(-9, -4, 810, 800);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -190,8 +190,8 @@ public class EsqueceuSenha extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 
     private boolean validarCampos(String email) {

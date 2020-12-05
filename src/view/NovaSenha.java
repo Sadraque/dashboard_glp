@@ -127,7 +127,7 @@ public class NovaSenha extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\sadra\\Documents\\NetBeansProjects\\dashboard-glp\\src\\img\\background.jpeg")); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 40, 1280, 720);
+        jLabel4.setBounds(-8, 0, 1180, 810);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -137,7 +137,8 @@ public class NovaSenha extends javax.swing.JFrame {
         
         if(validarCampos(senha)) {
         CRUD.alterarSenha(email, senha);
-            
+        
+        JOptionPane.showMessageDialog(rootPane, "Senha alterada com sucesso!");
         setVisible(false);
         Login login = new Login();
         login.setVisible(true);

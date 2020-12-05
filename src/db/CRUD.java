@@ -7,6 +7,8 @@ package db;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -46,8 +48,22 @@ public class CRUD extends SQLServer {
 
     }
 
+    public static boolean validarCpf(String cpf) {
+        ResultSet result = SQLServer.getQuery("SELECT cpf FROM USUARIO WHERE cpf='" +cpf +"';");
+        
+        try {
+            if(result.next()) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(CRUD.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return false;
+    }
+    
     public static void criarUsuario(Usuario usuario) {
-
+        
         SQLServer.executeQuery(
                 "INSERT INTO USUARIO VALUES ('"
                 + usuario.getCpf()

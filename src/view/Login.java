@@ -45,7 +45,7 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         link_esqueciMinhaSenha = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        criarConta_link = new javax.swing.JLabel();
         senha_textField = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -122,12 +122,17 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(link_esqueciMinhaSenha);
         link_esqueciMinhaSenha.setBounds(250, 520, 300, 17);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Criiar conta");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(250, 540, 300, 17);
+        criarConta_link.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        criarConta_link.setForeground(new java.awt.Color(255, 255, 255));
+        criarConta_link.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        criarConta_link.setText("Criiar conta");
+        criarConta_link.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                criarConta_linkMouseClicked(evt);
+            }
+        });
+        getContentPane().add(criarConta_link);
+        criarConta_link.setBounds(250, 540, 300, 17);
 
         senha_textField.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         senha_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -178,12 +183,19 @@ public class Login extends javax.swing.JFrame {
         String senha = senha_textField.getText();
 
         if (validarCampos(email, senha)) {
+            
+            if(CRUD.login(email, senha)) {
 
             System.out.println(CRUD.login(email, senha));
 
             setVisible(false);
             Dashboard dashboard = new Dashboard();
             dashboard.setVisible(true);
+            }
+            
+            else {
+                JOptionPane.showMessageDialog(rootPane, "EMAIL ou SENHA inválidos! Tente novamente", "", 2);
+            }
         }
 
     }//GEN-LAST:event_entrar_buttonActionPerformed
@@ -198,6 +210,14 @@ public class Login extends javax.swing.JFrame {
         setVisible(false);
         esqueceuSenha.setVisible(true);
     }//GEN-LAST:event_link_esqueciMinhaSenhaMouseClicked
+
+    private void criarConta_linkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_criarConta_linkMouseClicked
+        
+        setVisible(false);
+        CriarConta novaConta = new CriarConta();
+        novaConta.setVisible(true);
+        
+    }//GEN-LAST:event_criarConta_linkMouseClicked
 
     /**
      * @param args the command line arguments
@@ -236,13 +256,13 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel criarConta_link;
     private javax.swing.JTextField email_textField;
     private javax.swing.JButton entrar_button;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

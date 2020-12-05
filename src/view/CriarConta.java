@@ -5,14 +5,8 @@
  */
 package view;
 
-import db.SQLServer;
 import db.CRUD;
 import db.Usuario;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -197,11 +191,19 @@ public class CriarConta extends javax.swing.JFrame {
 
         if (validarCampos(nome, cpf, email, telefone, senha)) {
             Usuario usuario = new Usuario(cpf, nome, email, telefone, senha);
+            
+            if(CRUD.validarCpf(cpf)) {
+                JOptionPane.showMessageDialog(rootPane, "CPF já existente!", "", 2);
+            }
+            
+            else {
+            
             CRUD.criarUsuario(usuario);
-
+            JOptionPane.showMessageDialog(rootPane, "Conta criada com sucesso!");
             setVisible(false);
             Login login = new Login();
             login.setVisible(true);
+            }
         }
 
     }//GEN-LAST:event_criarConta_buttonActionPerformed
