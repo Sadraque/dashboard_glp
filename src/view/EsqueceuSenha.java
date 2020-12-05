@@ -18,12 +18,12 @@ import javax.swing.JOptionPane;
  *
  * @author sadra
  */
-public class Login extends javax.swing.JFrame {
+public class EsqueceuSenha extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-    public Login() {
+    public EsqueceuSenha() {
         initComponents();
         setSize(800, 800);
         setResizable(false);
@@ -40,16 +40,12 @@ public class Login extends javax.swing.JFrame {
 
         jFrame1 = new javax.swing.JFrame();
         email_textField = new javax.swing.JTextField();
-        entrar_button = new javax.swing.JButton();
+        enviar_button = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        link_esqueciMinhaSenha = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        senha_textField = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
@@ -79,15 +75,15 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(email_textField);
         email_textField.setBounds(250, 346, 300, 30);
 
-        entrar_button.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        entrar_button.setText("ENTRAR");
-        entrar_button.addActionListener(new java.awt.event.ActionListener() {
+        enviar_button.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        enviar_button.setText("ENVIAR");
+        enviar_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                entrar_buttonActionPerformed(evt);
+                enviar_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(entrar_button);
-        entrar_button.setBounds(250, 470, 300, 29);
+        getContentPane().add(enviar_button);
+        enviar_button.setBounds(250, 420, 300, 29);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,40 +102,9 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Entre para acessar o dashboard");
+        jLabel3.setText("Esqueci minha senha");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(250, 290, 300, 20);
-
-        link_esqueciMinhaSenha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        link_esqueciMinhaSenha.setForeground(new java.awt.Color(255, 255, 255));
-        link_esqueciMinhaSenha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        link_esqueciMinhaSenha.setText("Esqueci minha senha");
-        link_esqueciMinhaSenha.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                link_esqueciMinhaSenhaMouseClicked(evt);
-            }
-        });
-        getContentPane().add(link_esqueciMinhaSenha);
-        link_esqueciMinhaSenha.setBounds(250, 520, 300, 17);
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Criiar conta");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(250, 540, 300, 17);
-
-        senha_textField.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        senha_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        senha_textField.setToolTipText("");
-        senha_textField.setPreferredSize(new java.awt.Dimension(6, 29));
-        senha_textField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senha_textFieldActionPerformed(evt);
-            }
-        });
-        getContentPane().add(senha_textField);
-        senha_textField.setBounds(250, 402, 300, 30);
+        jLabel3.setBounds(250, 240, 300, 20);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -147,23 +112,16 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(190, 350, 39, 20);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Senha");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(190, 410, 43, 20);
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Digite o email para envio de código para redefinição de senha");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(130, 300, 540, 20);
 
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\sadra\\Documents\\NetBeansProjects\\dashboard-glp\\src\\img\\background.jpeg")); // NOI18N
-        jLabel9.setMaximumSize(new java.awt.Dimension(800, 800));
-        jLabel9.setMinimumSize(new java.awt.Dimension(800, 800));
-        jLabel9.setPreferredSize(new java.awt.Dimension(800, 800));
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 800, 800);
-
-        jLabel8.setText("jLabel8");
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\sadra\\Documents\\NetBeansProjects\\dashboard-glp\\src\\img\\background.jpeg")); // NOI18N
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(370, 100, 41, 16);
+        jLabel8.setBounds(0, -100, 800, 1000);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -172,28 +130,17 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_email_textFieldActionPerformed
 
-    private void entrar_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrar_buttonActionPerformed
+    private void enviar_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviar_buttonActionPerformed
 
         String email = email_textField.getText();
-        String senha = senha_textField.getText();
-        
-        validarCampos(email,senha);
-        
-        System.out.println(UsuarioDAO.login(email, senha));
-        
-        
-    }//GEN-LAST:event_entrar_buttonActionPerformed
+        if (validarCampos(email)) {
+            setVisible(false);
+            ValidacaoCodigoSenha validacaoCodigo = new ValidacaoCodigoSenha();
+            validacaoCodigo.setVisible(true);
+        }
 
-    private void senha_textFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senha_textFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_senha_textFieldActionPerformed
 
-    private void link_esqueciMinhaSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_link_esqueciMinhaSenhaMouseClicked
-        
-        EsqueceuSenha esqueceuSenha = new EsqueceuSenha();
-        setVisible(false);
-        esqueceuSenha.setVisible(true);
-    }//GEN-LAST:event_link_esqueciMinhaSenhaMouseClicked
+    }//GEN-LAST:event_enviar_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,48 +159,46 @@ public class Login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EsqueceuSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EsqueceuSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EsqueceuSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EsqueceuSenha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
-                
+                new EsqueceuSenha().setVisible(true);
+
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField email_textField;
-    private javax.swing.JButton entrar_button;
+    private javax.swing.JButton enviar_button;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel link_esqueciMinhaSenha;
-    private javax.swing.JPasswordField senha_textField;
     // End of variables declaration//GEN-END:variables
 
-    private void validarCampos(String email, String senha) {
-        if(email.isEmpty()) {
-            JOptionPane.showMessageDialog(rootPane, "O campo EMAIL deve ser preenchido!","Inválido",2);
-        } 
-        
-        if(senha.isEmpty()) {
-            JOptionPane.showMessageDialog(rootPane, "O campo SENHA deve ser preenchido!","Inválido",2);
+    private boolean validarCampos(String email) {
+        if (email.isEmpty()) {
+            JOptionPane.showMessageDialog(rootPane, "O campo EMAIL deve ser preenchido!", "Inválido", 2);
+
+            return false;
         }
+
+        return true;
     }
+
 }
