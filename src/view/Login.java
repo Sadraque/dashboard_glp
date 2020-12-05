@@ -6,7 +6,7 @@
 package view;
 
 import db.SQLServer;
-import db.UsuarioDAO;
+import db.CRUD;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -176,12 +176,16 @@ public class Login extends javax.swing.JFrame {
 
         String email = email_textField.getText();
         String senha = senha_textField.getText();
-        
-        validarCampos(email,senha);
-        
-        System.out.println(UsuarioDAO.login(email, senha));
-        
-        
+
+        if (validarCampos(email, senha)) {
+
+            System.out.println(CRUD.login(email, senha));
+
+            setVisible(false);
+            Dashboard dashboard = new Dashboard();
+            dashboard.setVisible(true);
+        }
+
     }//GEN-LAST:event_entrar_buttonActionPerformed
 
     private void senha_textFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senha_textFieldActionPerformed
@@ -189,7 +193,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_senha_textFieldActionPerformed
 
     private void link_esqueciMinhaSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_link_esqueciMinhaSenhaMouseClicked
-        
+
         EsqueceuSenha esqueceuSenha = new EsqueceuSenha();
         setVisible(false);
         esqueceuSenha.setVisible(true);
@@ -226,7 +230,7 @@ public class Login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Login().setVisible(true);
-                
+
             }
         });
     }
@@ -247,13 +251,17 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField senha_textField;
     // End of variables declaration//GEN-END:variables
 
-    private void validarCampos(String email, String senha) {
-        if(email.isEmpty()) {
-            JOptionPane.showMessageDialog(rootPane, "O campo EMAIL deve ser preenchido!","Inválido",2);
-        } 
-        
-        if(senha.isEmpty()) {
-            JOptionPane.showMessageDialog(rootPane, "O campo SENHA deve ser preenchido!","Inválido",2);
+    private boolean validarCampos(String email, String senha) {
+        if (email.isEmpty()) {
+            JOptionPane.showMessageDialog(rootPane, "O campo EMAIL deve ser preenchido!", "Inválido", 2);
+            return false;
         }
+
+        if (senha.isEmpty()) {
+            JOptionPane.showMessageDialog(rootPane, "O campo SENHA deve ser preenchido!", "Inválido", 2);
+            return false;
+        }
+
+        return true;
     }
 }

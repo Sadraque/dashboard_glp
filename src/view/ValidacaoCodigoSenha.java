@@ -6,7 +6,7 @@
 package view;
 
 import db.SQLServer;
-import db.UsuarioDAO;
+import db.CRUD;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -20,6 +20,25 @@ import javax.swing.JOptionPane;
  */
 public class ValidacaoCodigoSenha extends javax.swing.JFrame {
 
+    int codigo = 987654;
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+        String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
     /**
      * Creates new form Login
      */
@@ -132,15 +151,28 @@ public class ValidacaoCodigoSenha extends javax.swing.JFrame {
 
     private void validar_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validar_buttonActionPerformed
         String codigo = codigo_textField.getText();
+        
+        
 
-        if (validarCampos(codigo)) {
+        if (validarCodigo(codigo)) {
             setVisible(false);
             NovaSenha novaSenha = new NovaSenha();
             novaSenha.setVisible(true);
+            novaSenha.setEmail(email);
         }
-
+        
     }//GEN-LAST:event_validar_buttonActionPerformed
 
+    private boolean validarCodigo(String codigo) {
+        if(String.valueOf(this.codigo).equals(codigo)) {
+          
+            return true;
+        }
+        
+        JOptionPane.showMessageDialog(rootPane, "Código inválido", "Código inválido", 2);
+        return false;
+    }
+    
     /**
      * @param args the command line arguments
      */

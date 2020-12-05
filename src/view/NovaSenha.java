@@ -6,7 +6,7 @@
 package view;
 
 import db.SQLServer;
-import db.UsuarioDAO;
+import db.CRUD;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -20,6 +20,17 @@ import javax.swing.JOptionPane;
  */
 public class NovaSenha extends javax.swing.JFrame {
 
+    
+    String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
     /**
      * Creates new form Login
      */
@@ -125,6 +136,8 @@ public class NovaSenha extends javax.swing.JFrame {
         String senha = senha_textField.getText();
         
         if(validarCampos(senha)) {
+        CRUD.alterarSenha(email, senha);
+            
         setVisible(false);
         Login login = new Login();
         login.setVisible(true);

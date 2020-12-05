@@ -6,7 +6,8 @@
 package view;
 
 import db.SQLServer;
-import db.UsuarioDAO;
+import db.CRUD;
+import db.Usuario;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -194,9 +195,10 @@ public class CriarConta extends javax.swing.JFrame {
         String telefone = telefone_textField.getText();
         String senha = senha_textField.getText();
 
-        if(validarCampos(nome, cpf, email, telefone, senha)) {
-            //colocar metodo para criar usuario
-            
+        if (validarCampos(nome, cpf, email, telefone, senha)) {
+            Usuario usuario = new Usuario(cpf, nome, email, telefone, senha);
+            CRUD.criarUsuario(usuario);
+
             setVisible(false);
             Login login = new Login();
             login.setVisible(true);

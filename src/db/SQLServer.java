@@ -5,7 +5,6 @@
  */
 package db;
 
-import com.microsoft.sqlserver.jdbc.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -81,5 +80,21 @@ public class SQLServer {
 		}
 
 		return result;
+	}
+        
+        public static void executeQuery(String sql) {
+		connect();
+
+		try {
+			PreparedStatement query = connection.prepareStatement(sql);
+                        query.executeQuery();
+			disconnect();
+
+		} catch (SQLException e) {
+
+			disconnect();
+			//e.printStackTrace();
+		}
+
 	}
 }

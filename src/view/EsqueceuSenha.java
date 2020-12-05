@@ -6,7 +6,7 @@
 package view;
 
 import db.SQLServer;
-import db.UsuarioDAO;
+import db.CRUD;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -19,6 +19,8 @@ import javax.swing.JOptionPane;
  * @author sadra
  */
 public class EsqueceuSenha extends javax.swing.JFrame {
+    
+
 
     /**
      * Creates new form Login
@@ -137,6 +139,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
             setVisible(false);
             ValidacaoCodigoSenha validacaoCodigo = new ValidacaoCodigoSenha();
             validacaoCodigo.setVisible(true);
+            validacaoCodigo.setEmail(email);
         }
 
 
