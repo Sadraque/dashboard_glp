@@ -22,6 +22,7 @@ public class CriarConta extends javax.swing.JFrame {
         initComponents();
         setSize(800, 800);
         setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -64,7 +65,7 @@ public class CriarConta extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        email_textField.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        email_textField.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         email_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         email_textField.setToolTipText("");
         email_textField.setMinimumSize(new java.awt.Dimension(6, 29));
@@ -77,7 +78,9 @@ public class CriarConta extends javax.swing.JFrame {
         getContentPane().add(email_textField);
         email_textField.setBounds(250, 410, 300, 30);
 
-        criarConta_button.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        criarConta_button.setBackground(new java.awt.Color(0, 153, 255));
+        criarConta_button.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        criarConta_button.setForeground(new java.awt.Color(255, 255, 255));
         criarConta_button.setText("CRIAR CONTA");
         criarConta_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +88,7 @@ public class CriarConta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(criarConta_button);
-        criarConta_button.setBounds(250, 620, 300, 29);
+        criarConta_button.setBounds(250, 620, 300, 33);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,14 +104,14 @@ public class CriarConta extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(250, 180, 300, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Criar nova conta");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(250, 240, 300, 20);
+        jLabel3.setBounds(250, 240, 300, 25);
 
-        senha_textField.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        senha_textField.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         senha_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         senha_textField.setToolTipText("");
         senha_textField.setPreferredSize(new java.awt.Dimension(6, 29));
@@ -120,18 +123,19 @@ public class CriarConta extends javax.swing.JFrame {
         getContentPane().add(senha_textField);
         senha_textField.setBounds(250, 530, 300, 30);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Email");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(200, 420, 39, 20);
+        jLabel6.setBounds(189, 420, 60, 25);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Senha");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(190, 530, 43, 20);
+        jLabel7.setBounds(178, 530, 55, 25);
 
+        nome_textField.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         nome_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         nome_textField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,32 +145,35 @@ public class CriarConta extends javax.swing.JFrame {
         getContentPane().add(nome_textField);
         nome_textField.setBounds(250, 292, 300, 30);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Nome");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(200, 300, 50, 20);
+        jLabel4.setBounds(190, 300, 60, 25);
 
+        telefone_textField.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         telefone_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(telefone_textField);
         telefone_textField.setBounds(250, 470, 300, 30);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Telefone");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(180, 480, 70, 20);
+        jLabel8.setBounds(160, 470, 80, 25);
 
+        cpf_textField.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         cpf_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(cpf_textField);
         cpf_textField.setBounds(250, 350, 300, 30);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("CPF");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(200, 360, 41, 16);
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\sadra\\Documents\\NetBeansProjects\\dashboard-glp\\src\\img\\background.jpeg")); // NOI18N
         jLabel5.setMaximumSize(new java.awt.Dimension(800, 800));
         jLabel5.setMinimumSize(new java.awt.Dimension(800, 800));

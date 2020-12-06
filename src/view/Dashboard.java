@@ -21,6 +21,7 @@ public class Dashboard extends javax.swing.JFrame {
         initComponents();
         setSize(800, 800);
         setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**

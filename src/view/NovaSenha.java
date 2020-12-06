@@ -38,6 +38,7 @@ public class NovaSenha extends javax.swing.JFrame {
         initComponents();
         setSize(800, 800);
         setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -73,7 +74,9 @@ public class NovaSenha extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        redefinir_button.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        redefinir_button.setBackground(new java.awt.Color(0, 153, 255));
+        redefinir_button.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        redefinir_button.setForeground(new java.awt.Color(255, 255, 255));
         redefinir_button.setText("REDEFINIR");
         redefinir_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +84,7 @@ public class NovaSenha extends javax.swing.JFrame {
             }
         });
         getContentPane().add(redefinir_button);
-        redefinir_button.setBounds(250, 420, 300, 29);
+        redefinir_button.setBounds(250, 420, 300, 33);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,26 +100,27 @@ public class NovaSenha extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(250, 180, 300, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Redefinição de senha");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(250, 240, 300, 20);
+        jLabel3.setBounds(250, 240, 300, 25);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Senha");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(200, 350, 50, 20);
+        jLabel6.setBounds(180, 350, 60, 20);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Digite a nova senha");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(160, 300, 490, 20);
+        jLabel10.setBounds(160, 300, 490, 22);
 
+        senha_textField.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         senha_textField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senha_textFieldActionPerformed(evt);

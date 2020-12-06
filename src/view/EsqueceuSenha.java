@@ -29,6 +29,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         initComponents();
         setSize(800, 800);
         setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -64,7 +65,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        email_textField.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        email_textField.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         email_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         email_textField.setToolTipText("");
         email_textField.setMinimumSize(new java.awt.Dimension(6, 29));
@@ -77,7 +78,9 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         getContentPane().add(email_textField);
         email_textField.setBounds(250, 346, 300, 30);
 
-        enviar_button.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        enviar_button.setBackground(new java.awt.Color(0, 153, 255));
+        enviar_button.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        enviar_button.setForeground(new java.awt.Color(255, 255, 255));
         enviar_button.setText("ENVIAR");
         enviar_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +88,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enviar_button);
-        enviar_button.setBounds(250, 420, 300, 29);
+        enviar_button.setBounds(250, 420, 300, 33);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,25 +104,25 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(250, 180, 300, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Esqueci minha senha");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(250, 240, 300, 20);
+        jLabel3.setBounds(250, 240, 300, 25);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Email");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(190, 350, 39, 20);
+        jLabel6.setBounds(179, 350, 50, 25);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Digite o email para envio de código para redefinição de senha");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(130, 300, 540, 20);
+        jLabel10.setBounds(130, 300, 560, 22);
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\sadra\\Documents\\NetBeansProjects\\dashboard-glp\\src\\img\\background.jpeg")); // NOI18N
         getContentPane().add(jLabel4);

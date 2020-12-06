@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  *
  * @author sadra
  */
-public class CRUD extends SQLServer {
+public class CRUD {
 
     public static boolean login(String email, String senha) {
 

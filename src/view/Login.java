@@ -27,6 +27,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         setSize(800, 800);
         setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -66,7 +67,7 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        email_textField.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        email_textField.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         email_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         email_textField.setToolTipText("");
         email_textField.setMinimumSize(new java.awt.Dimension(6, 29));
@@ -79,7 +80,9 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(email_textField);
         email_textField.setBounds(250, 346, 300, 30);
 
-        entrar_button.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        entrar_button.setBackground(new java.awt.Color(0, 153, 255));
+        entrar_button.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        entrar_button.setForeground(new java.awt.Color(255, 255, 255));
         entrar_button.setText("ENTRAR");
         entrar_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,7 +90,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(entrar_button);
-        entrar_button.setBounds(250, 470, 300, 29);
+        entrar_button.setBounds(250, 470, 300, 33);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -103,14 +106,14 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(250, 180, 300, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Entre para acessar o dashboard");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(250, 290, 300, 20);
+        jLabel3.setBounds(250, 290, 300, 22);
 
-        link_esqueciMinhaSenha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        link_esqueciMinhaSenha.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         link_esqueciMinhaSenha.setForeground(new java.awt.Color(255, 255, 255));
         link_esqueciMinhaSenha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         link_esqueciMinhaSenha.setText("Esqueci minha senha");
@@ -120,9 +123,9 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(link_esqueciMinhaSenha);
-        link_esqueciMinhaSenha.setBounds(250, 520, 300, 17);
+        link_esqueciMinhaSenha.setBounds(250, 520, 300, 20);
 
-        criarConta_link.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        criarConta_link.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         criarConta_link.setForeground(new java.awt.Color(255, 255, 255));
         criarConta_link.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         criarConta_link.setText("Criiar conta");
@@ -132,9 +135,9 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(criarConta_link);
-        criarConta_link.setBounds(250, 540, 300, 17);
+        criarConta_link.setBounds(250, 540, 300, 20);
 
-        senha_textField.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        senha_textField.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         senha_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         senha_textField.setToolTipText("");
         senha_textField.setPreferredSize(new java.awt.Dimension(6, 29));
@@ -146,17 +149,17 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(senha_textField);
         senha_textField.setBounds(250, 402, 300, 30);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Email");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(190, 350, 39, 20);
+        jLabel6.setBounds(179, 350, 50, 25);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Senha");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(190, 410, 43, 20);
+        jLabel7.setBounds(170, 400, 60, 25);
 
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\sadra\\Documents\\NetBeansProjects\\dashboard-glp\\src\\img\\background.jpeg")); // NOI18N

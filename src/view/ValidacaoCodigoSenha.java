@@ -46,6 +46,7 @@ public class ValidacaoCodigoSenha extends javax.swing.JFrame {
         initComponents();
         setSize(800, 800);
         setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -81,7 +82,7 @@ public class ValidacaoCodigoSenha extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        codigo_textField.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        codigo_textField.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         codigo_textField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         codigo_textField.setToolTipText("");
         codigo_textField.setMinimumSize(new java.awt.Dimension(6, 29));
@@ -94,7 +95,9 @@ public class ValidacaoCodigoSenha extends javax.swing.JFrame {
         getContentPane().add(codigo_textField);
         codigo_textField.setBounds(250, 346, 300, 30);
 
-        validar_button.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        validar_button.setBackground(new java.awt.Color(0, 153, 255));
+        validar_button.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        validar_button.setForeground(new java.awt.Color(255, 255, 255));
         validar_button.setText("VALIDAR");
         validar_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +105,7 @@ public class ValidacaoCodigoSenha extends javax.swing.JFrame {
             }
         });
         getContentPane().add(validar_button);
-        validar_button.setBounds(250, 420, 300, 29);
+        validar_button.setBounds(250, 420, 300, 33);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -118,25 +121,25 @@ public class ValidacaoCodigoSenha extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(250, 180, 300, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Redefinição de senha");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(250, 240, 300, 20);
+        jLabel3.setBounds(250, 240, 300, 25);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Código");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(179, 350, 50, 20);
+        jLabel6.setBounds(170, 350, 70, 25);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Digite o código enviado no email");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(160, 300, 490, 20);
+        jLabel10.setBounds(160, 300, 490, 22);
 
         jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\sadra\\Documents\\NetBeansProjects\\dashboard-glp\\src\\img\\background.jpeg")); // NOI18N
         getContentPane().add(jLabel8);
